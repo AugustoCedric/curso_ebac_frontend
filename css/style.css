@@ -1,0 +1,379 @@
+/*-----------------------------------------------------*/
+/*                   INICIALIZANDO                     */
+/*-----------------------------------------------------*/
+
+/* Import kit fonts que vou precisar estilizar */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+
+/* ----- Zerando ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Inter";
+
+}
+
+/* definindo variaveis de cores para o projeto */
+
+:root {
+    --with-color: #fff;
+    --with-gray-color: #f9f9f9;
+    --red-color: #ff0000;
+    --rlaranja-color: #fc4c35;
+    --gray-color: #333333;
+
+    /* criação das variaveis em RGBA para background das sections */
+
+    --bg-gray-black: rgba(3, 0, 12, 0.05);
+    --bg-blue-black: rgba(42, 44, 79, 0.8);
+    --bg-with-black: rgb(225, 225, 225);
+    --bg-bege-ligth: rgba(191, 170, 155, 0.9);
+}
+
+
+/* ----- Tipografia ----- */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #333333;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+p {
+    /* text-align: justify; */
+    text-align: left;
+}
+
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+h6 {
+    font-size: 13px;
+}
+
+blockquote {
+    margin: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/*-----------------------------------------------------*/
+/*   RÉGUA PARA LOCALIZAR OS ELEMENTOS NA PAGINA       */
+/*-----------------------------------------------------*/
+/* ----- Régua vermelha ----- */
+
+.regua {
+    border: 1px solid red;
+}
+
+/*-----------------------------------------------------*/
+/*                   ELEMENTOS                         */
+/*-----------------------------------------------------*/
+/* ----- Links ----- */
+a {
+    display: inline-block;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+/* estilizar meus articles */
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* reduzir tamanho das imgs */
+.articles article img {
+    /* height: 180px; */
+    width: 100%;
+}
+
+.articles article {
+    width: 30%;
+}
+
+.articles article p {
+    font-size: 12px;
+}
+
+
+/* Criando Background minimalista */
+.background-messi {
+    background: rgba(3, 0, 12, 0.7)url(/img/banner-ebac.png);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30vw;
+    max-width: 100%;
+}
+
+/* criando configuração da logo */
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* estilizar o menu */
+nav ul {
+    display: flex;
+    gap: 30px;
+    font-size: 15px;
+}
+
+/* estilizando os botões do menu para cor branca */
+nav ul li a {
+    color: var(--with-color);
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: var(--rlaranja-color);
+    text-decoration: underline;
+}
+
+
+/* estilizar o Header */
+.header-top {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    align-items: center;
+    text-align: center;
+    gap: 10rem;
+}
+
+
+
+
+/* estilizando o botão enter*/
+.button-enter {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* estilizando o botão registrar-se */
+.button-enter button {
+    background-color: var(--red-color);
+    padding: 10px;
+    color: var(--with-color);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-enter button:hover {
+    background-color: var(--rlaranja-color);
+    text-decoration: underline;
+}
+
+.button-enter a {
+    color: var(--with-color);
+    font-size: 18px;
+}
+
+.button-enter a:hover {
+    color: var(--rlaranja-color);
+    text-decoration: underline;
+}
+
+.messi-meio-container {
+    margin-left: 35%;
+    margin-top: 12%;
+    max-width: 100%;
+}
+
+/* estilizando a manchet nome de Messi */
+.meio-messi h1 {
+
+    color: var(--with-color);
+    font-size: 68px;
+}
+
+/* estilizando o paragrafo abaixo do nome de Messi */
+.meio-messi p {
+    color: var(--with-gray-color);
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 1rem;
+    line-height: 25px;
+}
+
+/* estilizando o botão de ler mais da manchete */
+.btn {
+    background-color: var(--red-color);
+    padding: 10px;
+    color: var(--with-color);
+    border-radius: 5px;
+    border: none;
+    margin-top: 3rem;
+    cursor: pointer;
+    width: 150px;
+}
+
+.btn:hover {
+    background-color: var(--rlaranja-color);
+    text-decoration: underline;
+}
+
+/* estilizando o layout da section principal */
+section {
+    padding: 16px 0;
+}
+
+/* Gerando espaçamento entre os titulos */
+section h2,
+.articles article {
+    margin-bottom: 16px;
+}
+
+/* colocando espaço entre o Titulo e a data */
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+
+#section-esports>h2 {
+    font-size: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+
+
+}
+
+/* estilizar os links para ficar equivaletes a um botão */
+
+.articles article a {
+    background-color: var(--red-color);
+    padding: 2px;
+    text-align: center;
+    color: var(--with-color);
+    border-radius: 5px;
+    border: none;
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 100px;
+}
+
+/* aplicar efeito houver */
+.articles article a:hover {
+    background-color: var(--rlaranja-color);
+    text-decoration: underline;
+}
+
+/* Aumentar o tamanho do H2 dos titulos para ficar mais chamativos */
+
+section h2 {
+    font-size: 48px;
+}
+
+/* estilizando a section economia */
+#section-economia {
+    background: var(--bg-gray-black);
+}
+
+/* #section-economia h2 {
+    color: var(--with-gray-color);
+}
+
+#section-economia p {
+    color: var(--with-gray-color);
+}
+
+#section-economia h3 {
+    color: var(--with-gray-color);
+}
+
+#section-economia time {
+    color: var(--with-gray-color);
+} */
+
+/* estilizando a section Tecnologia */
+#section-Tecnologia {
+    background: var(--bg-blue-black);
+}
+
+#section-Tecnologia h2 {
+    color: var(--with-gray-color);
+}
+
+#section-Tecnologia p {
+    color: var(--with-gray-color);
+}
+
+#section-Tecnologia h3 {
+    color: var(--with-gray-color);
+}
+
+#section-Tecnologia time {
+    color: var(--with-gray-color);
+}
+
+/* Estilizando o Footer */
+
+footer {
+    background-color: var(--blue);
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 20px;
+}
+
+.footer-container p {
+    color: var(--bg-wite);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer small {
+    font-size: 80%;
+    display: block;
+}
