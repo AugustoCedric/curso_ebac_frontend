@@ -1,0 +1,152 @@
+/*--------------------------------------------------------*/
+/*                   INICIALIZANDO                        */
+/*--------------------------------------------------------*/
+
+/***Zerando toda estilização ---------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/***Definindo paleta de cores para o projeto------------- */
+/*   >> Irei utilizar atribuição de variaveis p/ rganizar */
+
+
+:root {
+    --bg-green-regular: #2ecc71;
+    --bg-green-semi-bold: #27ae60;
+    --white-color: #fff;
+    --red-color: #e91717;
+    --gray-bold:#1F2020;
+    --gray-regular:#282828;
+    --gray-light:#3C3C3C;
+}
+
+
+/***Definindo a tipografia geral-------------------------- */
+body {
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    color: var(--font-color-grafit);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--font-color-grafit-bold);
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+p {
+    text-align: left;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+h6 {
+    font-size: 13px;
+}
+
+blockquote {
+    margin: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/***Régua vermelha para ter visão de espaço dos elementos- */
+/*  >> basta colocar "regua" em qualquer nome de tag + 'regua' e ele mostra  */
+.regua {
+    border: 1px solid var(--red-color);
+}
+
+.container {
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+
+form {
+    margin-top: 40px;
+}
+
+input, button {
+    display: block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    resize: none;
+}
+
+button {
+    background-color: var(--bg-green-regular);
+    border: none;
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg-green-semi-bold);
+}
+
+.success-msg {
+    background-color: var(--bg-green-semi-bold);
+    padding: 16px;
+    color: var(--white-color);
+    display: none;
+}
+
+.error-msg {
+    font-size: 12px;
+    padding: 8px;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    margin-bottom: 8px;
+    display: none;
+}
+
+#text-h6{
+    color: var(--gray-light);
+    padding-top: 10px;
+}
+
+#text-h4{
+    color: var(--gray-light);
+    padding: 10px 0;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html - JavaScript</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <form id="form-ex-m7-js">
+            <h1>EBAC Html & JavaScript</h1>
+            <h3>Ex-m7-js</h3>
+            <div id="text-h6">
+                <h6>Aluno: Augusto Cedric</h6>
+                <h6>ebac - FullStack Python</h6>
+            </div>
+            <div id="text-h4">
+                Informe os valores para validação dos respectivos Campos A e Campo B.
+            </div>
+            <input type="number" id="idCampA" required placeholder="Campo A" />
+            <P class="error-msg">
+                O valor precisa ser maior que o Campo B
+            </P>
+            <input type="number" id="idCampB" required placeholder="Campo B" />
+            <button type="submit" id="btnCalc">Calcular</button>
+        </form>
+        <p class="success-msg"></p>
+        <p class="error-msg"></p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
