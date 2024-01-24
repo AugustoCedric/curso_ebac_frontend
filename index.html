@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/main.css">
+
+    <title>Formulário Bootstrap</title>
+</head>
+
+<body>
+    <div class="cont-master">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <img src="./src/img/undraw_delivery_address_re_cjca.svg" alt="">
+                <div class="col-md-6">
+                    <h3>Fomulário de cadastro</h3>
+                    <form>
+
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome completo:</label>
+                            <input type="text" class="form-control" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone:</label>
+                            <input type="tel" class="form-control telefone" id="telefone" name="telefone" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-success float-end">Enviar</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/imask"></script>
+    <script src="./src/js/main.js"></script>
+
+</body>
+
+</html>

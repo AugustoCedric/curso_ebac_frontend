@@ -1,0 +1,19 @@
+.regua {
+    border: 1px solid #a0056c;
+}
+
+.cont-master {
+    max-width: 640px;
+    width: 100%;
+    /* height: 80vh; */
+
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding-block: 30px;
+}
+
+.row>img {
+
+    width: 60%;
+}
