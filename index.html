@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Github</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img class="profile-avatar" src="https://via.placeholder.com/180x180" alt="." id="avatar">
+            <h1 class="profile-name" id="name"></h1>
+            <h2 class="profile-username" id="userName"></h2>
+            <ul class="numbers">
+                <li class="numbers-item">
+                    <h4>Repositórios</h4>
+                    <span id="reposit"></span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguidores</h4>
+                    <span id="followers"></span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguindo</h4>
+                    <span id="following"></span>
+                </li>
+            </ul>
+            <a href="#" class="profile-link" id="link">Ver no Github</a>
+        </div>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const linkElement = `https://api.github.com/users/AugustoCedric`;
+    
+            fetch(linkElement)
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error(`Erro HTTP! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(function (json) {
+                    const nameElement = $("#name").text(json.name);
+                    const avatarElement = $("#avatar").attr("src", json.avatar_url);
+                    const repositElement = $("#reposit").text(json.public_repos);
+                    const followersElement = $("#followers").text(json.followers);
+                    const followingElement = $("#following").text(json.following);
+                    $("#link").on("click", function () {
+                        window.open(json.html_url, "_blank");
+                    });
+                })
+                .catch(function (error) {
+                    console.error("Erro ao buscar dados:", error);
+                })
+                .finally(function () {
+                    console.log("Operação concluída com sucesso");
+                });
+        });
+    </script>
+    
+
+</body>
+
+</html>
